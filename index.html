@@ -9,12 +9,12 @@
             $("button").click(function(){
                 console.log("gogo")
                 $.get("https://api.github.com/users/dylanrod24", function(data) {
-                    myName = data.name;
+                    var myName = data.name;
                     $("p").html(myName);
                 })
             })
         })
-        
+
     </script>
 </head>
 <body>
