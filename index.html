@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hunting Github</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                console.log("gogo")
+                $.get("https://api.github.com/users/dylanrod24", function(data) {
+                    myName = data.name;
+                    $("p").html(myName);
+                })
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <p>Hold Me</p>
+    <button>Click</button>
+</body>
+</html>
